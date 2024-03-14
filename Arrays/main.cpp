@@ -36,7 +36,7 @@ void main()
 		sum += arr[i];
 	}
 	cout << "\nСумма элементов массива: " << sum << endl;
-	cout << "\nСреднее арифметическое элементов массива: " << sum / SIZE << endl;
+	cout << "\nСреднее арифметическое элементов массива: " << (double)sum / SIZE << endl;
 	int min, max;
 	min = max = arr[0];
 	for (int i = 0; i < SIZE; i++)
