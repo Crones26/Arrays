@@ -8,8 +8,9 @@ using std::endl;
 void main()
 {
 	setlocale(LC_ALL, "");
-	//cout() << int() << endl; // значение по умолчанию для типа 'int'
-	//double() 
+	//cout() << int() << endl; 
+	//int() значение по умолчанию для типа 'int'
+	//double() значение по умолчанию для типа 'double' 
 	const int n = 10;
 	int arr[n] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 	// Вывод исходного массива на экран:
