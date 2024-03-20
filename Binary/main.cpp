@@ -10,18 +10,22 @@ void main()
 
     int decimal;
     cout << "Введите десятичное число: "; cin >> decimal;
-    const int n = 8;
-    bool bin[n] = {};
+    const int n = 32;
+    int bin[n] = {};
     int i = 0;
-    while (decimal > 0)
+    while (decimal > 0 && i < n)
     {
-        bin[i] = decimal % 2;
-        i++;
+        bin[i++] = decimal % 2;
         decimal /= 2;
     }
-    for (--i; i >= 0; i--)
-    {
+    int whitespace = 0; 
+    for (--i; i >= 0; i--) {
         cout << bin[i];
+        whitespace++;
+        if (whitespace == 4) 
+        { 
+            whitespace = 0; 
+        }
     }
     cout << endl;
 }
