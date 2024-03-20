@@ -19,11 +19,13 @@ void main()
         decimal /= 2;
     }
     int whitespace = 0; 
-    for (--i; i >= 0; i--) {
+    for (--i; i >= 0; i--)
+    {
         cout << bin[i];
         whitespace++;
         if (whitespace == 4) 
         { 
+            cout << " ";
             whitespace = 0; 
         }
     }
