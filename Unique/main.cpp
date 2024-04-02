@@ -4,8 +4,8 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-#define UNIQUE_1
-//#define UNIQUE_2
+//#define UNIQUE_1
+#define UNIQUE_2
 #define tab "\t"
 
 void main()
@@ -18,11 +18,11 @@ void main()
     int minRand = 20, maxRand = 30; 
     for (int i = 0; i < n;)
     {
-        int randomNum = rand() % (maxRand - minRand) + minRand; 
+        arr[i] = rand() % (maxRand - minRand) + minRand;
         bool Unique = true;
         for (int j = 0; j < i; j++)
         {
-            if (arr[j] == randomNum)
+            if (arr[j] == arr[i])
             {
                 Unique = false;
                 break;
@@ -31,7 +31,6 @@ void main()
         // Если число уникально, добавляем его в массив
         if (Unique)
         {
-            arr[i] = randomNum;
             i++;
         }
     }
@@ -67,12 +66,12 @@ void main()
     }
     for (int i = 0; i < n;)
     {
-        int randomNum = rand() % (maxRand - minRand) + minRand;
+        arr[i] = rand() % (maxRand - minRand) + minRand;
         // Проверка на уникальность числа
         bool Unique = true;
         for (int j = 0; j < i; j++)
         {
-            if (arr[j] == randomNum)
+            if (arr[j] == arr[i])
             {
                 Unique = false;
                 break;
@@ -81,7 +80,6 @@ void main()
         // Если число уникально, добавляем его в массив
         if (Unique)
         {
-            arr[i] = randomNum;
             i++;
         }
     }
