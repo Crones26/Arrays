@@ -4,8 +4,8 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-//#define UNIQUE_1
-#define UNIQUE_2
+#define UNIQUE_1
+//#define UNIQUE_2
 #define tab "\t"
 
 void main()
@@ -19,17 +19,17 @@ void main()
     for (int i = 0; i < n;)
     {
         arr[i] = rand() % (maxRand - minRand) + minRand;
-        bool Unique = true;
+        bool unique = true;
         for (int j = 0; j < i; j++)
         {
             if (arr[j] == arr[i])
             {
-                Unique = false;
+                unique = false;
                 break;
             }
         }
         // Если число уникально, добавляем его в массив
-        if (Unique)
+        if (unique)
         {
             i++;
         }
@@ -47,23 +47,19 @@ void main()
     const int n = 10;
     int arr[n];
     int minRand, maxRand;
-    while (true)
+    do 
     {
-        cout << "Введите минимальное случайное число: "; cin >> minRand;
-        cout << "Введите максимальное случайное число: "; cin >> maxRand;
-        if (minRand < maxRand)
-        {
-            break;
-        }
+        system("CLS");
+        cout << "Введите минимальное случайное число: "; cin >> minRand; 
+        cout << "Введите максимальное случайное число: "; cin >> maxRand; 
+        if (minRand < maxRand) break;
         else if (minRand == maxRand)
-        {
-            cout << "Ошибка: Минимальное и максимальное значения не должны быть одинаковыми.\n";
-        }
-        else
-        {
-            cout << "Ошибка: Минимальное значение должно быть меньше максимального значения.\n";
-        }
-    }
+        cout << "Ошибка: Минимальное и максимальное значения не должны быть одинаковыми.\n";
+        else 
+        cout << "Ошибка: Минимальное значение должно быть меньше максимального значения.\n";
+        system("PAUSE");
+    } while (true); 
+
     for (int i = 0; i < n;)
     {
         arr[i] = rand() % (maxRand - minRand) + minRand;
